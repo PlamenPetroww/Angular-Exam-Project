@@ -1,0 +1,162 @@
+<div>
+  <div class="new-theme-border">
+    <div class="header-background">
+      <span>New Theme</span>
+    </div>
+    <form [formGroup]="form">
+      <!-- title -->
+
+      <div class="new-theme-title">
+        <label for="themeTitle">Title <span class="red">*</span></label>
+        <input
+          for="themeTitle"
+          type="text"
+          name="title"
+          id="title"
+          formControlName="title"
+        />
+      </div>
+
+      <!-- title validation-->
+
+      <ng-container *ngIf="form.get('title')?.touched">
+        <p
+          class="error-create-page"
+          *ngIf="form.get('title')?.errors?.['required']"
+        >
+          Offer title is required.
+        </p>
+        <p
+          class="error-create-page"
+          *ngIf="form.get('title')?.errors?.['minlength']"
+        >
+          Offer title must be at least 4 characters long.
+        </p>
+      </ng-container>
+
+      <!-- img -->
+
+      <div class="new-theme-title">
+        <label for="themeDuration">ImageUrl <span class="red">*</span></label>
+        <input
+          type="text"
+          name="img"
+          id="img"
+          placeholder="imageUrl"
+          formControlName="img"
+        />
+      </div>
+
+      <!-- img validation -->
+
+      <ng-container *ngIf="form.get('img')?.touched">
+        <p class="error-create-page" *ngIf="form.get('img')?.errors?.['required']">
+          The image is required!
+        </p>
+        <p class="error-create-page" *ngIf="form.get('img')?.errors?.['pattern']">
+          The image URL must start with https://
+        </p>
+
+      </ng-container>
+
+      <!-- description -->
+
+      <div class="new-theme-description">
+        <label for="themeDescription"
+          >Description <span class="red">*</span></label
+        >
+        <textarea
+          type="text"
+          name="description"
+          id="description"
+          rows="5"
+          formControlName="description"
+        ></textarea>
+      </div>
+      <!-- description  validation -->
+
+      <ng-container *ngIf="form.get('description')?.touched">
+        <p class="error-create-page" *ngIf="form.get('description')?.errors?.['required']"
+        >
+          The description field is required.
+        </p>
+        <p
+          class="error-create-page"
+          *ngIf="form.get('description')?.errors?.['minlength']"
+        >
+          Description must be at least 10 characters long.
+        </p>
+        <p
+          class="error-create-page"
+          *ngIf="form.get('description')?.errors?.['maxlength']"
+        >
+          Description must be at least 200 characters long.
+        </p>
+      </ng-container>
+
+      <!-- duration -->
+
+      <div class="new-theme-duration">
+        <label for="themeDuration">Duration <span class="red">*</span></label>
+        <input
+          type="text"
+          name="duration"
+          id="duration"
+          formControlName="duration"
+        />
+      </div>
+
+      <!-- duration validation -->
+
+      <ng-container *ngIf="form.get('duration')?.touched">
+        <p
+          class="error-create-page"
+          *ngIf="form.get('duration')?.errors?.['required']"
+        >
+          Duration is required.
+        </p>
+        <p
+          class="error-create-page"
+          *ngIf="form.get('duration')?.errors?.['min']"
+        >
+          The duration cannot be less than 2 days.
+        </p>
+        <p
+          class="error-create-page"
+          *ngIf="form.get('duration')?.errors?.['max']"
+        >
+          The duration cannot be more than 15 days.
+        </p>
+      </ng-container>
+
+      <!-- price -->
+
+      <div class="new-theme-price">
+        <label for="themePrice">Price <span class="red">*</span></label>
+        <input type="number" name="price" id="price" formControlName="price" />
+      </div>
+
+      <!-- price validation-->
+
+      <ng-container *ngIf="form.get('price')?.touched">
+        <p
+          class="error-create-page"
+          *ngIf="form.get('price')?.errors?.['required']"
+        >
+          The price is required!
+        </p>
+        <p class="error-create-page" *ngIf="form.get('price')?.errors?.['min']">
+          The price cannot be less than 50 $.
+        </p>
+        <p class="error-create-page" *ngIf="form.get('price')?.errors?.['max']">
+          The price cannot be more than 1000 $.
+        </p>
+      </ng-container>
+
+      <div class="new-theme-buttons">
+        <button class="subscribe" (click)="create()">Add</button>
+        <button class="subscribe" (click)="cancel()">Cancel</button>
+      </div>
+    </form>
+  </div>
+</div>

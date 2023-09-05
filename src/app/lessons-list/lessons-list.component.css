@@ -1,0 +1,154 @@
+
+
+.fancy-title {
+  font-family: 'Arial', sans-serif;
+  font-size: 40px;
+  position: relative;
+  display: inline-block;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.fancy-title::before {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 0;
+  width: 100%;
+  height: 3px;
+}
+
+.fancy-title::after {
+  content: '🙈';
+  display: block;
+  font-size: 30px;
+  margin-top: 5px;
+}
+
+.fancy-title h3 {
+  color: #121a37;
+  font-family: 'Hey October';
+}
+
+
+.listing__bilder__part__two {
+  background: linear-gradient(to bottom, #FFFDFD, #A2F9D0);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.listing__bilder__part__two .card__media__two {
+  flex: 0 0 17%;
+  margin: 1em;
+  box-shadow: 0 0 0.3em 0 rgba(0, 0, 0, 0.3);
+  display: flex;
+  flex-direction: column;
+}
+
+.card__part__two {
+  width: 80%;
+  flex: 0 0 30%;
+  margin: 1em;
+  box-shadow: 0 0 0.3em 0 rgba(0, 0, 0, 0.3);
+  display: flex;
+  flex-direction: column;
+  min-width: 323px;
+}
+
+.card__content__two a {
+  font-weight: bolder;
+  text-align: left;
+  text-decoration: none;
+  color: #121a37;
+  font-family: "Poppins";
+  text-transform: uppercase;
+}
+
+.card__content__two p {
+  font-family: "Open Sans";
+  font-size: 14px;
+}
+
+.card__content__two .summe {
+  color: #01b663;
+  font-weight: bolder;
+}
+
+.card__part__two .card__content__two {
+  flex-grow: 1;
+  padding: 1em 1.5em;
+}
+
+.card__part__two .card__media__two img {
+  display: block;
+  width: 300px;
+  height: 200px;
+}
+
+.info,
+.edit,
+.delete {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Poppins";
+  background-color: #121a37;
+  color: #ffffff;
+  border-radius: 0.3em;
+  text-decoration: none;
+  width: 150px;
+  height: 40px;
+  margin-left: 61px;
+  cursor: pointer;
+}
+
+.info:hover,
+.info:active,
+.info:focus,
+.edit:hover,
+.edit:active,
+.edit:focus,
+.delete:hover,
+.delete:active,
+.delete:focus {
+  transition: background-color 0.5s ease;
+  color: #121a37;
+  background-color: #01b663;
+}
+
+.title__page {
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.button__card__two {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.button__card__two a {
+  display: flex;
+  margin-top: 1em;
+  margin-bottom: 2em;
+  justify-content: center;
+  align-items: center;
+  font-family: "Poppins";
+  font-weight: bolder;
+  background-color: #01b663;
+  color: #ffffff;
+  border-radius: 0.3em;
+  text-decoration: none;
+  width: 150px;
+  height: 40px;
+}
+
+

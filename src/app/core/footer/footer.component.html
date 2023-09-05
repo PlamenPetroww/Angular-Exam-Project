@@ -1,0 +1,17 @@
+<section class="footer">
+  <div class="footer__up">
+    <div class="footer__up__left">Aidride</div>
+    <div *ngIf="!isAuth" class="footer__up__center">
+      <p>Ready get to started ?<br />Get in touch,or create an account.</p>
+      <div class="footer__up__right">
+        <a class="footer__button" href="/register">Register Now<span>&#8594;</span></a>
+      </div>
+    </div>
+    <div *ngIf="isAuth" class="footer__up__center">
+      <p>You are welcome back<br />Read the latest news</p>
+      <div class="footer__up__right">
+        <a class="footer__button" href="/https://www.surfertoday.com/surfing">News<span>&#8594;</span></a>
+      </div>
+    </div>
+  </div>
+</section>

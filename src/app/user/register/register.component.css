@@ -1,0 +1,107 @@
+/*login register forms  */
+
+form.register {
+  width: 40%;
+  margin: 2em auto 0;
+  text-align: center;
+  
+  mat-form-field {
+    width: 100%;
+  }
+}
+
+.register fieldset {
+  border-radius: 0.3em;
+  padding: 0.8em;
+  background-color: #ffffff;
+}
+
+h2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 0;
+  border-bottom: none;
+  font-family: "Hey October";
+  color: #121a37;
+  font-size: xx-large;
+}
+
+.register-username,
+.register-password,
+.register-email {
+  font-size: xx-large;
+}
+
+.register p {
+  padding-bottom: 0;
+  padding-top: 1.5rem;
+}
+
+.register input {
+  flex: 0 1 100%;
+  border: 1px solid;
+  padding: 0.3em;
+  border-left: 0.3em solid #01b663;
+  border-top-right-radius: 0.3em;
+  border-bottom-right-radius: 0.3em;
+}
+
+.register select {
+  border-color: #121a37;
+}
+
+.register button {
+  color: #01b663;
+  border: none;
+  border-radius: 0.3em;
+  padding: 0.6em 1.2em;
+  margin-top: 1.5rem;
+  width: 60%;
+  outline: none;
+  font-size: x-large;
+  font-family: "Hey October";
+}
+
+.custom-icon {
+  font-size: 24px;
+}
+
+.register i {
+  border-top-left-radius: 0.3em;
+  border-bottom-left-radius: 0.3em;
+  background-color: #e9ecef;
+}
+
+.register a {
+  color: #007bff;
+}
+
+.register a:hover {
+  cursor: pointer;
+}
+
+.register .field {
+  display: flex;
+  padding-bottom: 0;
+}
+
+/* errors  */
+
+p.error {
+  text-align: left;
+  border-radius: 0.3em;
+  color: red;
+  padding-top: 0;
+  font-family: "Poppins";
+}
+
+.input-error {
+  border-left-color: red;
+}
+
+.validForm {
+  transition: background-color 0.5s ease;
+  color: #01b663;
+  background-color: #121a37;
+}

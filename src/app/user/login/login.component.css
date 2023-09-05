@@ -1,0 +1,110 @@
+/*login register forms  */
+
+.container {
+  margin-bottom: 40px;
+}
+
+form.login {
+  width: 40%;
+  margin: 2em auto 0;
+  text-align: center;
+  font-family: "Opensans";
+}
+
+.login fieldset {
+  border-radius: 0.3em;
+  padding: 0.8em;
+  background-color: #ffffff;
+}
+
+h2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 0;
+  border-bottom: none;
+  font-family: "Hey October";
+  color: #121a37;
+  font-size: xx-large;
+}
+
+.login-password,
+.login-email {
+  font-size: xx-large;
+}
+
+.login p {
+  padding-bottom: 0;
+  padding-top: 1.5rem;
+}
+
+.login input {
+  flex: 0 1 100%;
+  border: 1px solid;
+  padding: 0.3em;
+  border-left: 0.3em solid #01b663;
+  border-top-right-radius: 0.3em;
+  border-bottom-right-radius: 0.3em;
+}
+
+.login select {
+  border-color: black;
+}
+
+.login button {
+  color: #01b663;
+  border: none;
+  border-radius: 0.3em;
+  padding: 0.6em 1.2em;
+  margin-top: 1.5rem;
+  width: 60%;
+  outline: none;
+  font-size: x-large;
+  font-family: "Hey October";
+}
+
+.login i {
+  border-top-left-radius: 0.3em;
+  border-bottom-left-radius: 0.3em;
+  background-color: #e9ecef;
+}
+
+.login a {
+  color: #007bff;
+}
+
+.login a:hover {
+  cursor: pointer;
+}
+.login .field {
+  display: flex;
+  padding-bottom: 0;
+}
+
+.custom-icon {
+  font-size: 24px;
+}
+
+/* errors  */
+
+p.error {
+  text-align: left;
+  border-radius: 0.3em;
+  color: red;
+  padding-top: 0;
+  font-family: "Poppins";
+}
+
+.input-error {
+  border-left-color: red;
+}
+
+.validForm {
+  transition: background-color 0.5s ease;
+  color: #01b663;
+  background-color: #121a37;
+}
+
+.loggin-error {
+  color: red;
+}

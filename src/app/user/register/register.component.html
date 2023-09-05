@@ -1,0 +1,110 @@
+<h2>Registration Form</h2>
+<div class="container">
+  <form class="register" [formGroup]="registerForm" (ngSubmit)="submit()">
+    <fieldset>
+      <!-- username -->
+      <span class="register-username">Username</span>
+      <p class="field field-icon">
+        <fa-icon  style="color: #01b663" [icon]="userIcon" class="custom-icon"></fa-icon>
+        <label for="username"
+          ></label>
+        <input
+          class="input-error"
+          type="text"
+          placeholder="username"
+          formControlName="username"
+        />
+      </p>
+      <!-- username validation -->
+
+      <ng-container *ngIf="username?.touched">
+        <p class="error" *ngIf="username?.errors?.['required']">
+          Username is required!
+        </p>
+        <p class="error" *ngIf="username?.errors?.['minlength']">
+          The username must be at least
+          {{username?.errors?.['minlength']['requiredLength']}} characters!
+        </p>
+      </ng-container>
+
+      <!-- email -->
+
+      <span class="register-email">Email</span>
+      <p class="field field-icon">
+        <label for="email"
+          ></label><fa-icon  style="color: #01b663" [icon]="emailIcon" class="custom-icon"></fa-icon>
+        <input
+          type="email"
+          name="email"
+          placeholder="Email address"
+          formControlName="email"
+        />
+      </p>
+
+      <!-- email validation -->
+
+      <ng-container *ngIf="email?.touched">
+        <p class="error" *ngIf="email?.errors?.['required']">Email is required!</p>
+        <p class="error" *ngIf="email?.errors?.['minlength']">Email must be {{email?.errors?.['minlength'] ['requiredLength']}} characters!</p>
+        <p class="error" *ngIf="email?.errors?.['emailValidator']">
+          Email is not valid!
+        </p>
+      </ng-container>
+
+      <!-- password -->
+
+      <span class="register-password">Password</span>
+      <p class="field field-icon">
+        <label for="password"
+          ></label><fa-icon  style="color: #01b663" [icon]="passwordIcon" class="custom-icon"></fa-icon>
+        <input
+          type="password"
+          name="password"
+          id="password"
+          placeholder="******"
+          formControlName="password"
+        />
+      </p>
+
+      <!-- password validation -->
+
+      <ng-container *ngIf="password?.touched">
+        <p class="error" *ngIf="password?.errors?.['required']">
+        Password is required!
+        <p class="error" *ngIf="password?.errors?.['minlength']">
+          Password must be at least 6 characters!
+        </p>
+      </ng-container>
+
+      <!-- rePassword -->
+
+      <span class="register-password">Confirm Password</span>
+      <p class="field field-icon">
+        <label for="rePassword"
+          ></label><fa-icon  style="color: #01b663" [icon]="passwordIcon" class="custom-icon"></fa-icon>
+        <input
+          type="password"
+          name="rePassword"
+          id="rePassword"
+          placeholder="******"
+          formControlName="confirmPassword"
+        />
+      </p>
+
+      <!-- rePass validation -->
+
+      <ng-container *ngIf="confirmPassword?.touched">
+        <p class="error" *ngIf="confirmPassword?.errors?.['required']">
+        Confirm Password is required
+        <p class="error" *ngIf="registerForm.errors?.['passwordDontMatch']">
+          Password don't match!
+        </p>
+      </ng-container>
+      <button type="submit" [ngClass]="{'validForm': registerForm.valid}">Create Account!</button>
+      <p class="text-center">
+        Have an account?
+        <a routerLink="/login">Log In</a>
+      </p>
+    </fieldset>
+  </form>
+</div>

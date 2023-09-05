@@ -1,0 +1,28 @@
+
+<main>
+  <section id="details-page">
+    <div class="main_card">
+      <div class="card_left">
+        <div *ngIf="lesson" class="card_datails">
+          <h1>Title: {{ lesson.title }}</h1>
+          <div class="card_character">
+            <p class="card-species">Author: {{ lesson.userEmail }}</p>
+            <p class="card-skin">Duration: {{ lesson.duration }} Days</p>
+            <p class="card-skin">Price: {{ lesson.price }} $</p>
+            <p class="card-desc">Description:</p><br>
+            <p class="text-desc">{{ lesson.description }}</p>
+          </div>
+        </div>
+      </div>
+      <div *ngIf="lesson" class="card_right">
+        <img src="{{lesson.img}}" alt="image" />
+      </div>
+    </div>
+    <p class="info-footer">
+      Do you want to be a part of this project? Then press Here
+    </p>
+    <button *ngIf="isAuth" type="submit" class="subscribe" [disabled]="isSubscribed" (click)="toggleSubscription()">
+      {{ buttonText }}
+    </button>
+  </section>
+</main>

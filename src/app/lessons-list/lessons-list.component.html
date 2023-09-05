@@ -1,0 +1,38 @@
+<div *ngIf="isLoading">
+  <app-loader />
+</div>
+
+<div *ngIf="noLessons" class="fancy-title">
+  <div *ngIf="isLoading">
+    <h3>There no Lessons !</h3>
+  </div>
+</div>
+
+<h2 *ngIf="lesson" class="title__page">Our Lessons</h2>
+
+<div *ngIf="!isLoading" class="listing__bilder__part__two" >
+  <article *ngFor="let lesson of lessonArray.slice(0, showAllLessons ? lessonArray.length : 3); let i = index" class="card__part__two">
+    <div class="card__media__two">
+      <img src="{{lesson.img}}" alt="#" />
+    </div>
+
+    <div class="card__content__two">
+      <a>Title: {{ lesson.title }}</a>
+      <p>Description: {{ lesson.description | slice:0:10 }} ...</p>
+      <p>Author: {{ lesson.userEmail }}</p>
+      <p>Duration: {{ lesson.duration }} Days</p>
+      <p class="summe">Price: {{ lesson.price }} $</p>
+        <ng-container *ngIf="lesson.userEmail === userUid">
+        <button *ngIf="isAuth" [routerLink]="[offerId[i]]" class="edit">Edit</button>
+        <button *ngIf="isAuth" class="delete" (click)="onDeleteHandler(offerId[i])">Delete</button>
+        </ng-container>
+      <div *ngIf="lesson.userEmail !== userUid">
+        <button [routerLink]="['/load-offer', offerId[i]]" class="info">Information</button>
+      </div>
+    </div>
+  </article>
+</div>
+<div *ngIf="!noLessons" class="button__card__two">
+  <a href="#" (click)="onViewAll($event)">View all</a>
+</div>
+

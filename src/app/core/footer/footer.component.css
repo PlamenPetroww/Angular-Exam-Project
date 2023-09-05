@@ -1,0 +1,60 @@
+.footer {
+    display: flex;
+    background-color: #050914;
+}
+
+.footer__up {
+    display: flex;
+    width: 100%;
+    border: 1px solid #2A2E37;
+}
+
+.footer__up__left {
+    display: flex;
+    flex: 1 1 5%;
+    color : #FFFFFF;
+    font-size: 2.5em;
+    font-weight: bolder;
+    justify-content: flex-end;
+    font-family: 'Hey October';
+    border-right: 1px solid #2A2E37;
+    padding: 1em;
+}
+
+.footer__up__center {
+    display: flex;
+    flex: 1 1 auto;
+    color: #FFFFFF; 
+    font-weight: bold;
+    justify-content: flex-end;
+    font-size: 1.3em;
+    padding-left: 4em;
+    margin-top: 0.5em;
+}
+
+.footer__up__right {
+    display: flex;
+    flex: 1 1 25%;
+    justify-content: flex-end;
+    padding: 1.2em 4em 0 0;
+}
+
+.footer__up__right .footer__button {
+    display: flex;
+    color: #FFFFFF;
+    background-color: #01B663;
+    text-decoration: none;
+    margin-right: 2em;
+    margin-top: 0.5em;
+    height: 40px;
+    width: 150px;
+    border-radius: 0.2em;
+    font-size: 0.6em;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer__button span {
+    padding-left: 0.8em;
+    padding-bottom: 0.1em;
+}

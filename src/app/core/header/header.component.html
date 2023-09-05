@@ -1,0 +1,32 @@
+<div class="header">
+  <div class="header__adresse">
+    <img src="https://img.icons8.com/material-outlined/48/000000/marker.png" />
+    <p>27 Division, Mirpur-12, Palm Beach</p>
+  </div>
+
+  <div class="header__menu">
+    <ul>
+      <li>
+        <a *ngIf="isAuth"
+          >Logged in as {{ email }}<span class="header__space">|</span></a
+        >
+        <a *ngIf="!isAuth" routerLink="/login"
+          >Login<span class="header__space">|</span></a
+        >
+        <a *ngIf="!isAuth" routerLink="/register"
+          >Register<span class="header__space"></span
+        ></a>
+        <a *ngIf="isAuth" (click)="onLogout()">Logout</a>
+      </li>
+    </ul>
+  </div>
+</div>
+
+<div class="nav__menu">
+  <div class="nav__menu__left">Aidride</div>
+  <div class="nav__menu__center"><a routerLink="/home">Home Page</a></div>
+  <div class="nav__menu__center"><a routerLink="/lessons">Lessons</a></div>
+  <div class="nav__menu__center">
+    <a routerLink="/add-lesson">New Lesson</a>
+  </div>
+</div>

@@ -1,0 +1,68 @@
+
+<div>
+  <h2>Login Form</h2>
+  <div class="container">
+    <form class="login" [formGroup]="loginForm" (ngSubmit)="submit()">
+      <fieldset>
+        <!-- email -->
+
+        <span class="login-email">Email</span>
+        <p class="field field-icon"><fa-icon  style="color: #01b663" [icon]="emailIcon" class="custom-icon"></fa-icon>
+          <label for="email" ></label>
+          <input 
+          type="email"
+            class="input-error"
+            placeholder="Email address"
+            formControlName="email"
+            [appEmail]="emailDomains"
+            
+          />
+        </p>
+
+        <!-- email validation -->
+
+        <ng-container *ngIf="email?.touched">
+          <p class="error" *ngIf="email?.errors?.['required']">
+            Email is required!
+          </p>
+          <p class="error" *ngIf="email?.errors?.['emailValidator']">
+            Email is not valid!
+          </p>
+        </ng-container>
+
+        <!-- password -->
+        <span class="login-password">Password</span>
+
+        <p class="field field-icon"><fa-icon  style="color: #01b663" [icon]="passwordIcon" class="custom-icon"></fa-icon>
+          <label for="password"></label>
+          <input
+            type="password"
+            placeholder="Password"
+            formControlName="password"
+          />
+        </p>
+
+        <!-- password validation -->
+
+        <ng-container *ngIf="password?.touched">
+          <p class="error" *ngIf="password?.errors?.['required']">
+            Password is required!
+          </p>
+          <p class="error" *ngIf="password?.errors?.['minlength']">
+            Password must be at least
+            {{password?.errors?.['minlength']['requiredLength']}} characters!
+          </p>
+        </ng-container>
+        <button type="submit" (click)="submit()" [ngClass]="{ validForm: loginForm.valid }">
+          Login
+        </button>
+
+        <p class="text-center">
+          Have an account?
+          <a routerLink="/register">Register</a>
+        </p>
+      </fieldset>
+    </form>
+  </div>
+</div>
+

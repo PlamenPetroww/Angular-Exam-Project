@@ -1,0 +1,176 @@
+/* new-theme */
+
+
+.new-theme-border {
+  background: linear-gradient(to bottom,#A2F9D0, #FFFDFD );
+  border: 1px solid;
+  border-radius: 1em;
+  width: 60%;
+  margin: auto;
+  margin-top: 2em;
+  padding: 1em;
+}
+
+.new-theme-border .input {
+  margin-bottom: 1em;
+}
+
+.header-background {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #01b663;
+  border: 1px solid #01b663;
+  padding: 1.5em;
+  margin-bottom: 1em;
+  border-radius: 1em;
+}
+
+.header-background span {
+  background-color: #fff;
+  padding: 0.5em;
+  border-radius: 0.3em;
+  font-family: "Hey October";
+  font-size: larger;
+}
+
+.title,
+.new-theme-content {
+  display: flex;
+  flex-direction: column;
+}
+
+.new-theme-content {
+  min-height: 100%;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+}
+
+.new-theme-content textarea {
+  width: 100%;
+  padding: 0.5em;
+  margin: 0;
+}
+
+.new-theme-content label {
+  margin-bottom: 0.3em;
+}
+
+.new-theme-title,
+.new-theme-description,
+.new-theme-price,
+.new-theme-duration {
+  font-family: "Hey October";
+  font-size: xx-large;
+}
+
+.new-theme-title input,
+.new-theme-description textarea,
+.new-theme-price input,
+.new-theme-duration input {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 55%;
+  border-radius: 0.3em;
+  padding: 0.35em;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.new-theme-title label,
+.new-theme-description label,
+.new-theme-price label,
+.new-theme-duration label {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0.5em 0 0.5em 0;
+}
+
+.new-theme-buttons {
+  margin-top: 2em;
+  margin-bottom: 1em;
+  text-align: center;
+}
+
+.new-theme-buttons button {
+  padding: 0.4em 1.5em;
+  border: 1px solid #333333;
+  border-radius: 0.3em;
+}
+
+/* errors  */
+
+p.error-create-page {
+  text-align: center;
+  border-radius: 0.3em;
+  color: red;
+  padding-top: 0;
+  font-family: "Poppins";
+  background-color: white;
+  padding: 5px 10px;
+}
+
+.input-error {
+  border-left-color: red;
+}
+
+.validForm {
+  transition: background-color 0.5s ease;
+  color: #01b663;
+  background-color: #121a37;
+}
+
+/* button */
+
+.new-theme-buttons .add,
+.new-theme-buttons .cancel {
+  display: flex;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 1em;
+}
+
+.add,
+.cancel {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Poppins";
+  background-color: #121a37;
+  color: #ffffff;
+  border-radius: 0.3em;
+  text-decoration: none;
+  width: 150px;
+  height: 40px;
+  margin-left: 61px;
+}
+
+.custom-icon {
+  font-size: 24px;
+}
+
+.subscribe {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Poppins";
+  background-color: #121a37;
+  color: #ffffff;
+  border-radius: 0.3em;
+  text-decoration: none;
+  width: 150px;
+  height: 40px;
+  margin: 2em auto 3em auto;
+  cursor: pointer;
+}
+
+.subscribe:hover,
+.subscribe:active,
+.subscribe:focus {
+  transition: background-color 0.5s ease;
+  color: #121a37;
+  background-color: #01b663;
+}
