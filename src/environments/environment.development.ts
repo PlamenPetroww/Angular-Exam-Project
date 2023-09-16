@@ -1,12 +1,8 @@
-/* export const environment = {
-    appUrl: 'https://test-angular-e21b5-default-rtdb.europe-west1.firebasedatabase.app'
-};
- */
 
 export const environment = {
     firebase: {
-    apiKey: 'AIzaSyA2RRkNCa07yGKqZxPBcobgxvotqLr4KFk',
-    authDomain: 'test-angular-e21b5.firebaseapp.com',
+      apiKey: process.env['FIREBASE_API_KEY'],
+      authDomain: process.env['FIREBASE_AUTH_DOMAIN'],
     databaseURL:
       'https://test-angular-e21b5-default-rtdb.europe-west1.firebasedatabase.app',
     projectId: 'test-angular-e21b5',
