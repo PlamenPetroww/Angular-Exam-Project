@@ -1,4 +1,4 @@
-# AngularProjectExam - https://angular-project-demo-9d85a.web.app/home (Non Responsive)
+# AngularProjectExam
 
 # Surf Lessons Website
 
@@ -27,6 +27,6 @@ Follow these steps to run the application locally:
 2. Navigate to the project directory.
 3. Run `npm install` to install dependencies.
 4. Run `ng serve` to start the development server.
-5. Open your browser and navigate to `http://localhost:4200`.
+5. Open your browser and navigate to `http://localhost:4200` or you can visit https://angular-project-demo-9d85a.web.app/home (Non Responsive).
 
-Have fun...
+Have fun... :)
