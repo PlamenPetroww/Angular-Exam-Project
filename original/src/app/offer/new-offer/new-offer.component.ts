@@ -89,10 +89,11 @@ export class NewOfferComponent implements OnInit {
       description: string;
       duration: string;
       price: string;
+      subscribers: string;
     };
 
     this.apiService
-      .createLesson(this.userId, this.userEmail, title, img, description, duration, price)
+      .createLesson(this.userId, this.userEmail, title, img, description, duration, price, /* subscribers */)
       .subscribe(() => {
         this.message.showToastAfterSucesseffulLesson();
         this.router.navigate(['/lessons']);

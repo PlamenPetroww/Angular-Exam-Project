@@ -27,7 +27,6 @@
     "@ngneat/overview": "^3.0.0",
     "@ngneat/until-destroy": "^10.0.0",
     "cors": "^2.8.5",
-    "dotenv": "^16.3.1",
     "firebase": "^9.23.0",
     "firebase-tools": "^12.4.6",
     "ngx-toastr": "^17.0.2",
