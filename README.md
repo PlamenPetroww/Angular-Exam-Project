@@ -1,4 +1,4 @@
-# AngularProjectExam - https://angular-project-wheat.vercel.app/login (Non Responsive)
+# AngularProjectExam - https://angular-project-wheat.vercel.app/register (Non Responsive)
 
 # Surf Lessons Website
 
