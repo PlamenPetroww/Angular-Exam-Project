@@ -52,27 +52,6 @@ export class CurrentOfferComponent implements OnInit {
         this.lessonA.id = this.id;
       })
     );
-
-    /* const subs$ = this.apiService.getSubscribers().pipe(
-      shareReplay(1),
-      map((responseData) => {
-        const subsArray = [];
-        for(const key in responseData) {
-          if(responseData.hasOwnProperty(key)) {
-            subsArray.push({ ...responseData[key], id: key})
-          }
-        }
-        return subsArray;
-      })
-    ) */
-
-    /* combineLatest([lesson$, subs$]).subscribe(([lesson, subs]) => {
-      
-      this.subscriptions = subs;
-      this.lesson = lesson;
-
-      
-    }) */
   }
 
   fetchLesson(): void {
